@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="../css/style.css">
+
+    <title>Início</title>
+</head>
+<body>
+	
+	   <!--Nav-->
+
+    <div class="container">
+
+        <nav class="navbar navbar-expand-lg bg-primary">
+            <div class="container-fluid">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/inicio">Início</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/login">Login</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="sobre.html">Sobre Nós</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/cadastrarPaciente">Agendar</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+
+    </div>
+    
+    <script>
+    alert("Seja bem-vindo(a);");
+    </script>
+    
+    <!--Carousel-->
+
+    <div class="container">
+
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img th:src="@{\img\medica1.jpg}" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>First slide label</h5>
+                  <p>Some representative placeholder content for the first slide.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img th:src="@{\img\medica1.jpg}" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Second slide label</h5>
+                  <p>Some representative placeholder content for the second slide.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img th:src="@{\img\medica1.jpg}" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Third slide label</h5>
+                  <p>Some representative placeholder content for the third slide.</p>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+
+    </div>
+    
+    
+       <!--Especialidades Oferecidas-->
+
+    <div class="container">
+        <h2 class="text-center">Especialidades Oferecidas</h2>
+
+        <div class="row gap-5">
+            <div class="card mb-3" style="width: 18rem;">
+                <img th:src="@{\img\medica1.jpg}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Dermatologia</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Saiba Mais</a>
+                </div>
+              </div>
+
+              <div class="card mb-3" style="width: 18rem;">
+                <img th:src="@{\img\medica1.jpg}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Clínico Geral</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Saiba Mais</a>
+                </div>
+              </div>
+
+              <div class="card mb-3" style="width: 18rem;">
+                <img th:src="@{\img\medica1.jpg}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Pediatria</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Saiba Mais</a>
+                </div>
+              </div>
+
+              <div class="card mb-3" style="width: 18rem;">
+                <img th:src="@{\img\medica1.jpg}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Cardiologia</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Saiba Mais</a>
+                </div>
+              </div>
+
+              <div class="card mb-3" style="width: 18rem;">
+                <img src="C:\Users\Aluno Noite\Documents\projeto-final\img\dentista1.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Saiba Mais</a>
+                </div>
+              </div>
+
+              <div class="card mb-3" style="width: 18rem;">
+                <img src="C:\Users\Aluno Noite\Documents\projeto-final\img\dentista1.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+
+              <div class="card mb-3" style="width: 18rem;">
+                <img src="C:\Users\Aluno Noite\Documents\projeto-final\img\dentista1.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+
+              <div class="card mb-3" style="width: 18rem;">
+                <img src="C:\Users\Aluno Noite\Documents\projeto-final\img\dentista1.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+        </div>
+
+    </div>
+    
+        <!--Depoimentos-->
+
+    <div class="container">
+      <h2 class="text-center">Depoimentos</h2>
+<div class="">
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col">
+      <div class="card h-100">
+       
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        </div>
+        <div class="card-footer">
+          <small class="text-body-secondary">Last updated 3 mins ago</small>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-100">
+        
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+        </div>
+        <div class="card-footer">
+          <small class="text-body-secondary">Last updated 3 mins ago</small>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-100">
+       
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+        </div>
+        <div class="card-footer">
+          <small class="text-body-secondary">Last updated 3 mins ago</small>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card h-100">
+       
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+        </div>
+        <div class="card-footer">
+          <small class="text-body-secondary">Last updated 3 mins ago</small>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card h-100">
+       
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+        </div>
+        <div class="card-footer">
+          <small class="text-body-secondary">Last updated 3 mins ago</small>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card h-100">
+       
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+        </div>
+        <div class="card-footer">
+          <small class="text-body-secondary">Last updated 3 mins ago</small>
+        </div>
+      </div>
+    </div>
+  </div>
+      
+</div>
+    </div>
+    
+    <!-- Localização -->
+    
+    <h2 class="text-center">Localização</h2>
+    
+    <div class="container">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15357.44260992461!2d-47.8828595!3d-15.7849261!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a3afdf4c9b857%3A0x5b273898a82bbd02!2sHospital%20Regional%20de%20Asa%20Norte!5e0!3m2!1spt-BR!2sbr!4v1692916149400!5m2!1spt-BR!2sbr" width="1300" 
+    height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    
+    <!-- Rodapé -->
+    
+    <footer class="container">
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color:#1981cb;">
+    © 2020 Copyright:
+    <a class="text-dark" href="https://mdbootstrap.com/">IgorMoreira.com</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+    
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+<title>Listagem de pacientes</title>
+</head>
+<body>
+
+   <!--Nav-->
+
+    <div class="container">
+
+        <nav class="navbar navbar-expand-lg bg-primary">
+            <div class="container-fluid">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/inicio">Início</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/login">Login</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="sobre.html">Sobre Nós</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/cadastrarPaciente">Cadastrar</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+
+    </div>
+
+	<div class="container">
+		<div class="card" th:each="paciente : ${pacientes}" style="margin: 15px 0px; height:60%">
+			<div class="card-header" th:text="${paciente.nome}"></div>
+			<div class="card-body">
+				<div class="row">
+					<div class="col">
+						<div>
+							cpf:<span th:text="${paciente.cpf}"></span>
+						</div>
+						
+						<div>
+							especialidade:<span th:text="${paciente.especialidade}"></span>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col" style="margin: 0px 0px 10px 50px">
+					<a th:href="@{/editar/{id}(id=${paciente.id})}" class="btn btn-primary">Editar</a>
+					<button data-bs-toggle="modal" class="btn btn-danger" th:attr="data-bs-target='#modalExcluir'+${paciente.id}">Deletar</button>
+				</div>
+			</div>
+			
+			<div class="modal" tabindex="-1" th:attr="id='modalExcluir'+${paciente.id}">
+			  <div class="modal-dialog">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <h5 class="modal-title">Excluir paciente?</h5>
+			        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			      </div>
+			      <div class="modal-body">
+			        <p>Deseja realmente excluir o paciente: <span th:text="${paciente.nome}"></span>?</p>
+			      </div>
+			      <div class="modal-footer">
+			        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+			        <a th:href="@{/delete/{id}(id=${paciente.id})}" type="button" class="btn btn-warning">Confirmar</a>
+			      </div>
+			    </div>
+			  </div>
+			</div>
+			
+		</div>
+	
+	</div>
+	
+	
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</body>
+</html>
