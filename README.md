@@ -1,2 +1,2 @@
 # projetoConsulta
- Projeto feito em sala de aula no senai
+ Projeto feito em sala de aula. 
